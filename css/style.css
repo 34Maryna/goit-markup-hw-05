@@ -98,9 +98,6 @@ color: var(--accent-color);
 .header-nav {
 padding: 28px 0;  
 }
-.header-links {
-    position: relative;
-}
 .cur-h::after {
 content: "";
 width: 48px;
@@ -136,6 +133,8 @@ margin-right: 50px;
 }
 .header-links {
 color: var(--primary-color);
+position: relative;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-links:hover,
 .header-links:focus {
@@ -150,19 +149,20 @@ color: var(--second-color);
 .header-cont {
 margin-left: auto;
 }
+.header-link{
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
+}
 .icon-mail {
 width: 16px; 
 height: 12px; 
 margin-right: 10px;
 fill: currentColor;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-tel {
 width: 10px; 
 height: 16px; 
 margin-right: 10px;
 fill: currentColor;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tel {
 margin-left: 50px; 
@@ -171,7 +171,6 @@ margin-left: 50px;
 .header-link:focus {
 color: var(--accent-color);
 fill: var(--accent-color);
-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
     /*---HERO---*/
@@ -396,8 +395,8 @@ align-items: center;
 margin-bottom: 30px;
 }
 .team-soc-item {
-    width: 44px;    
-    height: 44px;
+width: 44px;    
+height: 44px;
 }
 .team-soc-item:not(:last-child) {
 margin-right: 10px;  
@@ -448,15 +447,14 @@ fill: var(--second-brdr-color);
 border: 1px solid var(--second-brdr-color);
 border-radius: 4px; 
 background-color: var(--bg-color);
-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:focus,
 .client-link:hover,
 .client-item:focus,
 .client-item:hover {
 fill: var(--accent-color);
-border-color: var(--accent-color);  
-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+border-color: var(--accent-color);    
 }
 
 /*---FOOTER---*/
@@ -486,6 +484,7 @@ margin-bottom: 9px;
 .footer-links {
 font-style: normal;
 color: var(--bg-color);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .footer-address {
 color: rgba(255, 255, 255, 0.6);    
