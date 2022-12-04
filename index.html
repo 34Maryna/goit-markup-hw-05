@@ -18,7 +18,7 @@
    <a href="index.html" class="header-logo logo link"><span class="accent logo link">Web</span>Studio</a>
    <nav class="header-nav">
       <ul class="header-list list">
-         <li><a href="" class="header-links link current links">Студія</a></li>
+         <li><a href="" class="header-links link current cur-h links">Студія</a></li>
          <li><a href="./portfolio.html" class="header-links link links">Портфоліо</a></li>
          <li><a href="" class="header-links link links">Контакти</a></li>
        </ul>
@@ -45,7 +45,16 @@
     <section class="hero hero-section">
       <div class="container hero-container">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="hero-btn">Замовити послугу</button>
+        <button type="button" class="hero-btn" data-modal-open>Замовити послугу</button>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+        <button tupe="button" class="button-modal" button-modal-close>
+      <svg class="item-icon" width="18" heigth="18">
+        <use href="./img/icons.svg#icon-close-black"></use>
+      </svg>
+        </button>
+        </div>
+      </div>
       </div>
       </section>
 
@@ -101,12 +110,15 @@
     <ul class="list-work list">
       <li class="work-items"> 
         <img src="./img/work-1.jpg" alt="Робочій процес" width="370">
+      <p class="work-subtitle">Десктопні додатки</p>
       </li>
       <li class="work-items">
         <img src="./img/work-2.jpg" alt="Смартфон" width="370">
+      <p class="work-subtitle">Мобільні додатки</p>
       </li>
       <li class="work-items">
         <img src="./img/work-3.jpg" alt="Планшет" width="370">
+      <p class="work-subtitle">Дизайнерські рішення</p>
       </li>
     </ul>
   </div>
